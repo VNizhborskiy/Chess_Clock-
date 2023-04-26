@@ -123,22 +123,30 @@ void Timer(int minutes1, int seconds1, int minutes2, int seconds2, char symb_min
             }
             if (x % 2 != 0 && seconds1 != -1)
             {
-                seconds1--;
+                
                 if (i > 1 && x > 1)
                 {
                     seconds2 += increment;
                     i = 1;
+                    system("cls");
+                    continue;
+                    
                 }
+                seconds1--;
             }
             else if (x % 2 == 0 && seconds2 != -1)
             {
 
-                seconds2--;
+                
                 if (i > 1 && x > 1)
                 {
                     seconds1 += increment;
                     i = 1;
+                    system("cls");
+                    continue;
+                
                 }
+                seconds2--;
             }
             // Проверки
             if (seconds1 == -1 && minutes1 != 0 && x % 2 != 0)
